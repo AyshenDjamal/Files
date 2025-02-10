@@ -5,9 +5,11 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
+    public static final String myEmail = "ayshen92@gmail.com";
+    public static final String myPassword = "Salam";
+
     public static void main(String[] args) {
         Menu();
-
 
     }
 
@@ -89,7 +91,11 @@ public class Main {
             writer.write("SIGN IN-EMAIL: " + email2 + ", PASSWORD: " + password2);
             writer.write("Uğurla sistemə giriş edildi!");
             System.out.println("------------------------------");
-            System.out.println("Uğurla sistemə giriş edildi!\n");
+            if(email2.equals(myEmail) && password2.equals(myPassword)){
+                System.out.println("Uğurla sistemə giriş edildi!");
+            }else{
+                System.out.println("Email və ya Parol səhv qeyd edilib");
+            }
             writer.close();
         } catch (IOException e) {
             System.err.println("ERROR" + e.getMessage());
